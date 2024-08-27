@@ -11,5 +11,21 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
 
+  constuctor(){
+    this.getPaises();
+  }
 
+  getPaises(){
+    fetch('https://restcountries.com/v3.1/all?fields=ccn3,flags,name')
+    .then(dados => dados.json())
+    .then(dados => {
+      console.log(dados)
+    })
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{
+      console.log('processo finalizado')
+    })
+  }
 }
