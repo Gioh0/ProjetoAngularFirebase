@@ -11,7 +11,9 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
 
-  constuctor(){
+  paises: any;
+
+  constructor(){
     this.getPaises();
   }
 
@@ -20,6 +22,7 @@ export class HomePage {
     .then(dados => dados.json())
     .then(dados => {
       console.log(dados)
+      this.paises = dados;
     })
     .catch(erro => {
       console.log(erro);

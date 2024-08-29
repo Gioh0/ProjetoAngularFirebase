@@ -1,0 +1,22 @@
+
+$transicao: all 1s;
+
+.on-mouse {
+    cursor: pointer;
+    & h2, & h3 {
+        transition: $transicao;
+    }
+}
+
+.on-mouse:hover {
+    & h2{
+        color: purple;
+        letter-spacing: 2px;
+        transition: $transicao;
+    }
+
+    & h3 {
+        color: rgb(47, 249, 1);
+        transition: $transicao;
+    }
+}
