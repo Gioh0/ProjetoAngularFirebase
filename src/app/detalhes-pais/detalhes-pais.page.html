@@ -1,0 +1,68 @@
+<ion-content [fullscreen]="true">
+
+  <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="10">
+
+          <ion-row class="ion-justify-content-center">
+              <ng-container *ngFor="let pais of this.paises">
+                  <ion-col size="12" size-lg="4">
+                      <ion-item lines="none">
+                          <ion-thumbnail slot="start">
+                              <img src="{{ pais.flags.png }}">
+                          </ion-thumbnail>
+                          <ion-label>
+                              <h2>{{ pais.name.common }}</h2>
+                              <h3>{{ pais.name.official }}</h3>
+                          </ion-label>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>
+                            <ion-row>
+                                <ion-col>
+                                    <ion-item lines="none">
+                                        <h3>Capital:&nbsp;{{pais.capital}}</h3>
+                                    </ion-item>
+                                    <ion-item lines="none">
+                                        <h3>Populaçao:&nbsp;{{pais.population}}</h3>
+                                    </ion-item lines="none">
+                                    <ion-item>
+                                        <h3>Língua:&nbsp;{{pais.languages}}</h3>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                           <ion-row>
+                            <ion-col>
+                                <ion-item lines="none">
+                                    <h3>Area:&nbsp;{{pais.area}}</h3>
+                                </ion-item>
+                            </ion-col>
+                           </ion-row>
+                           <ion-row>
+                            <ion-col>
+                                <ion-item>
+                                    <h3>Região:&nbsp;{{pais.region}}</h3>
+                                </ion-item>
+                                <ion-item>
+                                    <h3>Sub-região:&nbsp;{{pais.subregion}}</h3>
+                                </ion-item>
+                            </ion-col>
+                           </ion-row>
+                    
+                        
+                            <ng-container *ngFor="let pais of this.paises">
+                                <ion-label>
+                                    <h3>Fuso horários:&nbsp;{{pais.timezones}}</h3>
+                                </ion-label>
+                              </ng-container>
+                        </ion-label>
+                      </ion-item>
+                  </ion-col>
+              </ng-container>
+              
+          </ion-row>
+          
+      </ion-col>
+  </ion-row>
+  
+  
+</ion-content>

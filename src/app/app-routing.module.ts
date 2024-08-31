@@ -10,6 +10,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'detalhes-pais',
+    loadChildren: () => import('./detalhes-pais/detalhes-pais.module').then( m => m.DetalhesPaisPageModule)
   }
 ];
 
