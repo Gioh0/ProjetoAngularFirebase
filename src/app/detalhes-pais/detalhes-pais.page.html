@@ -2,8 +2,7 @@
 
   <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-lg="10">
-
-          <ion-row class="ion-justify-content-center">
+ <ion-row class="ion-justify-content-center">
               <ng-container *ngFor="let pais of this.paises">
                   <ion-col size="12" size-lg="4">
                       <ion-item lines="none">
@@ -24,9 +23,9 @@
                                     </ion-item>
                                     <ion-item lines="none">
                                         <h3>Populaçao:&nbsp;{{pais.population}}</h3>
-                                    </ion-item lines="none">
-                                    <ion-item>
-                                        <h3>Língua:&nbsp;{{pais.languages}}</h3>
+                                    </ion-item>
+                                    <ion-item lines="none">
+                                        <h3>Populaçao:&nbsp;{{pais.lenguages}}</h3>                                       }}</h3>
                                     </ion-item>
                                 </ion-col>
                             </ion-row>
@@ -39,21 +38,24 @@
                            </ion-row>
                            <ion-row>
                             <ion-col>
-                                <ion-item>
+                                <ion-item lines="none">
                                     <h3>Região:&nbsp;{{pais.region}}</h3>
                                 </ion-item>
-                                <ion-item>
+                                <ion-item lines="none">
                                     <h3>Sub-região:&nbsp;{{pais.subregion}}</h3>
                                 </ion-item>
+                                <ion-item lines="none">
+                                    <h3>Fuso Horário:&nbsp;{{pais.timezones}}</h3>
+                                </ion-item>
+                                      <ion-item>      
+                                        <p *ngIf="pais.independent"> {{pais.altSpellings[1]}} é um país independente!</p>
+                                        <p *ngIf="!pais.independent"> {{pais.altSpellings[1]}} não é um país independente.</p>  
+                                      </ion-item>
+                                      <ion-item lines="none">
+                                        <h3>Veja mais sobre os paises que fazem fronteira:&nbsp;{{pais.borders}}</h3>
+                                    </ion-item>
                             </ion-col>
                            </ion-row>
-                    
-                        
-                            <ng-container *ngFor="let pais of this.paises">
-                                <ion-label>
-                                    <h3>Fuso horários:&nbsp;{{pais.timezones}}</h3>
-                                </ion-label>
-                              </ng-container>
                         </ion-label>
                       </ion-item>
                   </ion-col>
