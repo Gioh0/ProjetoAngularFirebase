@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'ver-detalhes-pais',
     loadChildren: () => import('./ver-detalhes-pais/ver-detalhes-pais.module').then( m => m.VerDetalhesPaisPageModule)
+  },
+  {
+    path: 'contato',
+    loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
+  },
+  {
+    path: 'galeria',
+    loadChildren: () => import('./galeria/galeria.module').then( m => m.GaleriaPageModule)
   }
 ];
 
