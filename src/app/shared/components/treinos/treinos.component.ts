@@ -9,8 +9,8 @@ export class TreinosComponent  implements OnInit {
 
   treinos = {
     peito: [
-      {peito1: 'https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-reto-com-halteres.gif'},
-      {peito2: 'https://www.hipertrofia.org/blog/wp-content/uploads/2020/06/dumbbell-reverse-bench-press.gif'}, 
+      {exercicio: 'https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-reto-com-halteres.gif'},
+      {exercicio: 'https://www.hipertrofia.org/blog/wp-content/uploads/2020/06/dumbbell-reverse-bench-press.gif'}, 
     ]
   }
 
