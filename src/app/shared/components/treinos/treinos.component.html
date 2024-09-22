@@ -1,10 +1,43 @@
+<ion-item>Braço</ion-item>
 <ion-item>
-    <ng-container *ngFor="let treino of this.treinos.peito">
+    <ng-container *ngFor="let treinob of this.treinos.braco">
     <ion-row>
         <ion-col>
-        <img src="{{ treino.exercicio }}" alt="">
+            <img src="{{ treinob.exercicio }}" alt="">
         </ion-col>
     </ion-row>
     </ng-container>
 </ion-item>
- 
+
+<ion-item>Peito</ion-item> 
+<ion-item>
+    <ng-container *ngFor="let treino of this.treinos.peito">
+    <ion-row>
+        <ion-col>
+            <img src="{{ treino.exercicio }}" alt="">
+        </ion-col>
+    </ion-row>
+    </ng-container>
+</ion-item>
+
+<ion-item>Costas</ion-item>
+<ion-item>
+    <ng-container *ngFor="let treinoc of this.treinos.costas">
+    <ion-row>
+        <ion-col>
+            <img src="{{ treinoc.exercicio }}" alt="">
+        </ion-col>
+    </ion-row>
+    </ng-container>
+</ion-item>
+
+<ion-item>Perna</ion-item>
+<ion-item>
+    <ng-container *ngFor="let treinop of this.treinos.perna">
+    <ion-row>
+        <ion-col>
+            <img src="{{ treinop.exercicio }}" alt="">
+        </ion-col>
+    </ion-row>
+    </ng-container>
+</ion-item>
