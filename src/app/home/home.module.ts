@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { BannerModule } from '../shared/components/banner/banner.module';
 import { TreinosModule } from '../shared/components/treinos/treinos.module';
+import { FooterModule } from '../footer/footer.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TreinosModule } from '../shared/components/treinos/treinos.module';
     HomePageRoutingModule,
     HeaderModule,
     BannerModule,
-    TreinosModule
+    TreinosModule,
+    FooterModule
   ],
   declarations: [HomePage]
 })
