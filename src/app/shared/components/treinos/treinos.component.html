@@ -1,14 +1,16 @@
 <ion-row>
-  <ion-col class="ion-text-center" size="12"><h1>Treinos</h1></ion-col>
+  <ion-col class="ion-text-center" size="12">
+    <h1>Treinos</h1>
+  </ion-col>
 </ion-row>
 
-<ion-row class="ion-justify-content-center">
-  <ng-container *ngFor="let treino of this.treinos ">
-            <ion-col class="ion-text-center" size="3">
-              <h1>{{treino.nome}}</h1>
-              <ng-container *ngFor="let imagem of treino.exercicios ">
-                      <img src="{{imagem.exercicio}}" class="img" alt="">       
-                    </ng-container>
-                  </ion-col>
-  </ng-container>
+<ion-row class="ion-justify-content-center texto">
+  <ng-container *ngFor="let treino of this.treinos" class="textob">
+    <ion-col class="ion-text-center" size="3">
+      <h1>{{treino.nome}}</h1>
+      <ng-container *ngFor="let imagem of treino.exercicios ">
+        <img src="{{imagem.exercicio}}" alt="" class="ex">
+      </ng-container>
+    </ion-col>
+  </ng-container>
 </ion-row>
