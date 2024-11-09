@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10" size-lg="8" class="ion-text-center">
+      <ion-label>
+        <h1>
+          Dê seu feedback de nossos produtos
+        </h1>
+      </ion-label>
+      <ion-item>
+        <ion-input label="Nome do cliente:"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Nome do produto:"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea label="Descreva sua avaliação:" rows="10" cols="10"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-button slot="end">Salvar</ion-button>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10" size-lg="8">
+      <ion-card>
+        <ion-row>
+          <ion-col>
+            Nome:
+          </ion-col>
+          <ion-col>
+            Produto
+          </ion-col>
+          <ion-col>
+            Avaliação
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<app-footer></app-footer>

@@ -1,55 +1,138 @@
+<app-menu></app-menu>
 <ion-content [fullscreen]="true">
 
-  <!-- Menu Segmentos -->
+
   <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="5">
-      <ion-segment value="usuarios" (ionChange)="trocar($event)">
-        <ion-segment-button value="usuarios">Usuários</ion-segment-button>
-        <ion-segment-button value="treinos">Treinos</ion-segment-button>
-      </ion-segment>
+    <ion-col size="6" size-lg="3" class="fundo tenis1"></ion-col>
+    <ion-col size="6" size-lg="3" class="fundo tenis2"></ion-col>
+    <ion-col size="6" size-lg="3" class="fundo tenis3"></ion-col>
+    <ion-col size="6" size-lg="3" class="fundo tenis4"></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <h1>PUMA</h1>
     </ion-col>
   </ion-row>
 
-  <!-- Lista de Usuários -->
-  <ion-row class="ion-justify-content-center" *ngIf="this.segments == 'usuarios'">
-    <ion-col size="12" size-lg="5">
-      <ng-container *ngFor="let user of this.usuarios">
-        <ion-item color="secondary">
-          <ion-label color="primary">
-            <h2>{{ user.nome }}</h2>
-            <h3>Idade: {{ user.idade }}</h3>
-            <h3>Gênero: {{ user.genero }}</h3>
-          </ion-label>
-        </ion-item>
-        <ion-accordion-group>
-          <ng-container *ngFor="let rotina of user.rotinas">
-            <ion-accordion value="{{ rotina.dia }}">
-              <ion-item slot="header">
-                <ion-label>{{ rotina.dia }}</ion-label>
-              </ion-item>
-              <div class="ion-padding" slot="content">
-                <ng-container *ngFor="let treino of rotina.treinos">
-                  <ion-item color="dark">
-                    <ion-label color="primary">{{ treino }}</ion-label>
-                  </ion-item>
-                </ng-container>
-              </div>
-            </ion-accordion>
-          </ng-container>
-        </ion-accordion-group>
-      </ng-container>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="4" class="fundo puma"></ion-col>
+    <ion-col size="12" size-lg="4">
+      <ion-item lines="none">
+        <p>
+
+          A história da Puma se inicia no ano de 1948, numa pequena cidade alemã, quando Rudolf Dassler briga com seu
+          irmão e resolve fundar sua empresa para produção de artigos esportivos. O primeiro lançamento foi de uma
+          chuteira, onde se iniciou seu duradouro relacionamento com o futebol. Posteriormente, em 1962, com um ritmo
+          acelerado de crescimento e se destacando pelo mundo, a Puma exportava seus produtos para 100 países
+          aproximadamente.
+
+          Em 1974, os filhos de Rudolf, Armin e Gerd, assumiram o comando da empresa. Dois anos mais tarde, a marca
+          alemã
+          ingressou na NBA, por isso teve uma multidão de fãs. Portanto, por volta de 1992 a marca se encontrava no
+          vermelho até que em 1993, um jovem executivo entrou na área do marketing e então no ano seguinte a empresa já
+          voltava ao lucro.
+
+          Hoje, a marca está presente em mais de 120 países, comercializando calçados, acessórios, relógios, roupas e
+          perfumes, possui ainda mais de 800 lojas próprias pelo mundo. A Puma é a terceira maior marca esportiva do
+          planeta.
+      </ion-item>
     </ion-col>
   </ion-row>
 
-  <!-- Lista de Treinos -->
-  <ion-row class="ion-justify-content-center" *ngIf="this.segments == 'treinos'">
-    <ion-col size="12" size-lg="5">
-
-
-      
-
-
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <h1> MAIS VENDIDOS</h1>
     </ion-col>
   </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10" size-lg="8">
+      <ion-row>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/369579/21/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis RS-X Reinvention</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/310868/01/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis LaFrancé Assist</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+         <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/399645/01/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis GV Special Players Lane</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/311176/01/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis MB.03 Hallowen</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/310697/01/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis MB.04 La Francé</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/310829/07/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis Court Pro</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/400969/02/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis Pro Crafted</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" size-lg="3">
+          <ion-card>
+            <ion-card-title>
+              <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/402101/10/sv01/fnd/BRA/w/1000/h/1000/fmt/png" alt="">
+            </ion-card-title>
+            <ion-card-content>
+              <h3>Tênis Puma 180</h3>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <app-footer></app-footer>
 
 </ion-content>
